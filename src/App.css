@@ -1,0 +1,208 @@
+/* Estilos de la app. Clases en español y agrupadas por funcionalidad,
+   para que cada bloque se corresponda con un componente (sin librerías UI). */
+
+/* ---------- Layout principal (mobile-first y responsivo) ---------- */
+.app {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.app__titulo {
+  margin: 0;
+  text-align: center;
+  font-size: 1.9rem;
+  color: var(--texto);
+}
+
+.app__resultado {
+  min-height: 120px;
+}
+
+/* ---------- Funcionalidad 1: buscador ---------- */
+.barra-busqueda {
+  display: flex;
+  gap: 8px;
+}
+
+.barra-busqueda__campo {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--texto);
+}
+
+.barra-busqueda__campo:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 1px;
+}
+
+.barra-busqueda__boton {
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--radio);
+  background: var(--acento);
+  color: var(--acento-contraste);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.barra-busqueda__boton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Funcionalidad 3: historial ---------- */
+.historial__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.historial__titulo {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+.historial__limpiar {
+  border: none;
+  background: none;
+  color: var(--acento);
+  font-size: 0.85rem;
+}
+
+.historial__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.historial__item {
+  padding: 6px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font-size: 0.85rem;
+  transition: border-color 0.2s;
+}
+
+.historial__item:hover {
+  border-color: var(--acento);
+}
+
+/* ---------- Funcionalidad 2: tarjeta del clima ---------- */
+.tarjeta-clima {
+  background: var(--superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 24px;
+  text-align: center;
+}
+
+.tarjeta-clima__cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-clima__ciudad {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.tarjeta-clima__pais {
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+.tarjeta-clima__icono {
+  margin: 4px 0;
+}
+
+.tarjeta-clima__temperatura {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.tarjeta-clima__descripcion {
+  text-transform: capitalize;
+  color: var(--texto-suave);
+  margin: 0 0 16px;
+}
+
+.tarjeta-clima__detalles {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 0;
+}
+
+.tarjeta-clima__detalle dt {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.tarjeta-clima__detalle dd {
+  margin: 2px 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ---------- Funcionalidad 4: indicador de carga ---------- */
+.indicador-carga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px;
+}
+
+.indicador-carga__circulo {
+  width: 38px;
+  height: 38px;
+  border: 4px solid var(--borde);
+  border-top-color: var(--acento);
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+.indicador-carga__texto {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Respeta a quien prefiere menos movimiento (accesibilidad). */
+@media (prefers-reduced-motion: reduce) {
+  .indicador-carga__circulo {
+    animation-duration: 2s;
+  }
+}
+
+/* ---------- Funcionalidad 5: mensaje de error ---------- */
+.mensaje-error {
+  background: var(--superficie);
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: var(--radio);
+  padding: 16px;
+  text-align: center;
+}

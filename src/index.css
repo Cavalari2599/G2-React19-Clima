@@ -1,0 +1,53 @@
+/* Reset mínimo y variables de tema. Sin librerías externas (requisito). */
+:root {
+  --fondo: #eef3fb;
+  --fondo-degradado: linear-gradient(160deg, #6aa9ff 0%, #a0c4ff 45%, #eef3fb 100%);
+  --superficie: #ffffff;
+  --texto: #1f2933;
+  --texto-suave: #6b7280;
+  --acento: #2563eb;
+  --acento-contraste: #ffffff;
+  --borde: #e2e8f0;
+  --error: #dc2626;
+  --radio: 16px;
+  --sombra: 0 12px 30px rgba(15, 23, 42, 0.12);
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0f172a;
+    --fondo-degradado: linear-gradient(160deg, #1e3a8a 0%, #1e293b 55%, #0f172a 100%);
+    --superficie: #1e293b;
+    --texto: #e2e8f0;
+    --texto-suave: #94a3b8;
+    --acento: #60a5fa;
+    --acento-contraste: #0f172a;
+    --borde: #334155;
+    --error: #f87171;
+    --sombra: 0 12px 30px rgba(0, 0, 0, 0.45);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--fondo-degradado);
+  background-attachment: fixed;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
