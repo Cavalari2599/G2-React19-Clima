@@ -24,8 +24,8 @@ PENDIENTE
 
 1. Clonar el repositorio:
 ```bash
-   git clone https://github.com/Cavalari2599/ProyectoGrupal.git     ARREGLAR!!!!
-   cd ProyectoGrupal
+   git clone https://github.com/Cavalari2599/G2-React19-Clima.git
+   cd G2-React19-Clima
 ```
 
 2. Instalar dependencias:
@@ -115,7 +115,7 @@ VITE_OWM_API_KEY=tu_api_key_aqui
 ![Responsivo](./capturas/05-ipad.png)
 
 ### Vista movil
-![Responsivo](./capturas/05-movil.png)
+![Responsivo](./capturas/06-movil.png)
 
 ## Referencias
 

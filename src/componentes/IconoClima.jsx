@@ -7,7 +7,7 @@ import {
   IconoTormenta,
   IconoNieve,
   IconoNiebla,
-} from './iconos.jsx'
+} from './Iconos.jsx'
 
 // Traduce la clave devuelta por iconoPorClima() al componente SVG real.
 // Vive separado de tema.js para que ese archivo no importe JSX (sigue

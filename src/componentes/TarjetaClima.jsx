@@ -21,7 +21,7 @@ import {
   IconoAmanecer,
   IconoAtardecer,
   IconoReloj,
-} from './iconos.jsx'
+} from './Iconos.jsx'
 
 /**
  * Funcionalidad 2: muestra el clima actual con todos los datos disponibles

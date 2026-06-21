@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Variables de entorno (NUNCA subir la API Key). Solo se versiona .env.example
+.env
+.env.*
+!.env.example
+
+# Configuración local de Claude Code (no pertenece al repo)
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
